@@ -13,17 +13,10 @@
   </head>
 
   <body id="principal">
-    <div class="container">
-      <?php include "../-/components/php/header.php" ?> <!-- Header -->
-
-      <!-- Carousel + Reserva -->
-      
-
-      <!-- Body -->
-
-
-    </div> <!-- Container -->
-
+  <script type="text/javascript" language="javascript">
+   window.location.assign("es/"); 
+  </script>
+  </body>
     <script src="../-/js/myscripts.js"></script>
     <script src="../-/js/jquery.js"></script>
     <script src="../-/js/bootstrap.js"></script>
