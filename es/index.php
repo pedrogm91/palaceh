@@ -14,12 +14,18 @@
 
   <body id="principal">
     <div class="container">
-      <?php include "../-/components/php/header.php" ?> <!-- Header -->
-
-      <!-- Carousel + Reserva -->
-      
-
-      <!-- Body -->
+     <div class="content row"> 
+           <?php include "../-/components/php/header.php" ?> <!-- Header -->
+           <!-- Carousel + Reserva -->
+           <section class="col-md-7">
+              <?php include "../-/components/php/snippet_carousel.php" ?>
+           </section> <!-- articles -->
+           
+           <section class="col-md-5">
+             
+           </section> <!-- asides -->
+       </div> <!-- Content -->
+    
 
 
     </div> <!-- Container -->
