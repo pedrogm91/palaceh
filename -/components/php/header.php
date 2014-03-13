@@ -19,14 +19,24 @@
 				</div> <!-- Direccion -->
             </div> <!-- row -->
 			<div class="navbar navbar-default">
-				<ul class="nav nav-pills nav-justified">
-					<li><a href="#">Inicio</a></li>
-					<li><a href="#">Servicios</a></li>
-					<li><a href="#">Habitaciones</a></li>
-					<li><a href="#">Tasca-Restaurant</a></li>
-					<li><a href="#">Reservas</a></li>
-					<li><a href="#">Preguntas</a></li>
-					<li><a href="#">Contacto</a></li>
-				</ul> <!-- nav -->
+			    <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+                     <span class="sr-only">Toggle navigation</span>
+                     <span class="glyphicon glyphicon-arrow-down"></span>
+                     MENU
+                     </button>
+                  </div>
+
+				<div class="collapse navbar-collapse" id="collapse">
+				    <ul class="nav nav-pills nav-justified">
+						<li><a href="#">Inicio</a></li>
+						<li><a href="#">Servicios</a></li>
+						<li><a href="#">Habitaciones</a></li>
+						<li><a href="#">Tasca-Restaurant</a></li>
+						<li><a href="#">Reservas</a></li>
+						<li><a href="#">Preguntas</a></li>
+						<li><a href="#">Contacto</a></li>
+					</ul> <!-- nav -->
+			    </div>
 			</div> <!-- navbar -->
 		</header>
