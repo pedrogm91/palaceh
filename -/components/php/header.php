@@ -1,6 +1,6 @@
 		<header class="clearfix">
 		    <div class="row">
-		    	<div class="col-lg-3 col-sm-offset-9 col-xs-offset-6 col-xs-6">
+		    	<div id="banderas" class="pull-right">
 		    		<a href="#"><img src="/images/flag_venezuela.png"></a>
 		    		<a href="#"><img src="/images/flag_us.png"></a>
 		    		<a href="#"><img src="/images/flag_portugal.gif"></a>
