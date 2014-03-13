@@ -10,12 +10,13 @@
 				<section class="branding col-md-4">
 					<a href="index.php"><img src="/images/logo.gif" alt="Logo"></a>
 				</section> <!-- branding -->
-				<div class="direccion col-md-6 col-md-offset-2">
-				  <ul>
-				  	<li>Direccion: Avenida Romulo Gallegos cruce con Calle Shettino</li>
-				  	<li>Valle de la Pascua Estado Guarico</li>
-				  	<li>Telefonos: 0235 - 3412073 / 0235 3422440</li>
-				  </ul>
+				<div class="direccion col-md-4 col-md-offset-4">
+				    <address>
+					  <strong>Palace Hotel, C.A.</strong><br>
+					  Avenida Romulo Gallegos cruce con calle Shettino<br>
+					  Valle de la Pascua - Estado Guarico<br>
+					  <abbr title="Telefono">Tlf:</abbr> (0235) 342-2440
+					</address>
 				</div> <!-- Direccion -->
             </div> <!-- row -->
 			<div class="navbar navbar-default">

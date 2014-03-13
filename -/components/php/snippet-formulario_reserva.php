@@ -53,7 +53,7 @@
   </div>
 
   <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-8">
+    <div class="col-sm-offset-4">
       <button type="submit" class="btn btn-default">Reservar</button>
     </div>
   </div>

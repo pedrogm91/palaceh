@@ -20,6 +20,7 @@
            <section class="col-md-7">
               <?php include "../-/components/php/snippet_carousel.php" ?>
               <?php include "../-/components/php/article_bienvenido.php" ?>
+              <?php include "../-/components/php/article_noticias_eventos.php" ?>
            </section> <!-- articles -->
            
            <section class="col-md-5">
