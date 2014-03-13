@@ -22,7 +22,7 @@
            </section> <!-- articles -->
            
            <section class="col-md-5">
-             
+              <?php include "../-/components/php/snippet-formulario_reserva.php" ?>
            </section> <!-- asides -->
        </div> <!-- Content -->
     
