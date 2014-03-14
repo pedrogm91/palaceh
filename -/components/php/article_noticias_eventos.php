@@ -3,7 +3,7 @@
         <h1> Noticias y Eventos </h1>
           <h2>Lorem Ipsum</h2>
 	     	<p class="media-body">
-	     	    <img src="/images/noticias_holder.gif" class="pull-left" alt="Noticias">
+	     	    <img src="/images/noticias_holder.gif" class="pull-left img-responsive" alt="Noticias">
 	     		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, sint, error, 
 	     		saepe dicta voluptatum sapiente distinctio quia consequatur officiis aspernatur recusandae modi
 	     		 praesentium inventore fugiat magni. Vel veniam incidunt tenetur.

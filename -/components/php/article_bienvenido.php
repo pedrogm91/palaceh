@@ -1,4 +1,4 @@
-<article class="bienvenidos">
+<section class="bienvenidos">
   <h1>Bienvenidos a Palace Hotel</h1>
 		<article class="media">
 		   <img id="bienvenido" class="pull-right img-responsive" src="/images/bienvenido_holder.gif" alt="Bienvenido">
@@ -10,4 +10,4 @@
 		    nemo ex at dignissimos aperiam quos blanditiis officiis sit ullam accusantium eos vitae.
 		   </p>
 		</article>
-</article>
+</section>
