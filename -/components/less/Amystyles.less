@@ -16,7 +16,7 @@ body {
 }
 
 .form-horizontal .control-label {
-    text-align: left;
+	text-align: left;
 }
 
 .bienvenidos {
@@ -31,12 +31,12 @@ body {
 	margin-right: 30px;
 }
 img.pull-right {
-      @media (max-width: 480px){
-      	
-      		width:150px;
-      		height:auto;
-      	}
-      }
+	@media (max-width: 480px){
+
+		width:150px;
+		height:auto;
+	}
+}
 
 .form-group {
 	margin-bottom: 10px;
@@ -47,6 +47,35 @@ img.pull-right {
 		margin:15px;
 	}
 	img.pull-left {
-       margin-left:0;
+		margin-left:0;
+	}
+}
+
+.visitarlapascua {
+	img {
+		margin:10px;
+	   	@media (max-width: 1199px) {
+			margin:0px;
+		}
+			@media (max-width: 991px) {
+			margin:15px;
+		}
+			@media (max-width: 768px) {
+			margin:15px;
+		}
+
+	}
+
+	img.visible-xs {
+		@media (max-width: 767px) {
+			display: inline !important;
+		}
+	}
+
+	img.visible-sm {
+		@media (max-width: 991px) and (min-width: 768px) {
+
+			display: inline !important;
+		}
 	}
 }

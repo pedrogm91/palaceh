@@ -1,7 +1,7 @@
 <section class="formreserva">
 <form class="form-horizontal" role="form">
  <fieldset>
- <legend>Solicitud de Reserva</legend>
+ <legend><h2>Solicitud de Reserva</h2></legend>
   <div class="form-group">
     <label for="solicitante" class="col-sm-4 control-label">Solicitante</label>
     <div class="col-sm-8">
