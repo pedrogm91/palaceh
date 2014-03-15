@@ -9,10 +9,14 @@
 		    fuga facere voluptate rem magni voluptatem debitis aperiam iste. Libero aut facere ullam
 		    voluptates neque possimus! Veniam, aspernatur.
 		</p>
-
-		<img src="/images/vlp_holder.gif" alt="Valle de la Pascua">
-		<img src="/images/vlp_holder.gif" alt="Valle de la Pascua">
-		<img src="/images/vlp_holder.gif" alt="Valle de la Pascua">
-		<img src="/images/vlp_holder.gif" alt="Valle de la Pascua" class="visible-xs visible-sm">
+			<div class="row">
+				<img src="/images/vlp_holder.gif" alt="Valle de la Pascua" class="col-xs-3">
+				
+				<img src="/images/vlp_holder.gif" alt="Valle de la Pascua" class="col-xs-3">
+				
+				<img src="/images/vlp_holder.gif" alt="Valle de la Pascua" class="col-xs-3">
+				
+				<img src="/images/vlp_holder.gif" alt="Valle de la Pascua" class="col-xs-3 hidden-lg">
+			</div>
 	</aside>
 </section>
