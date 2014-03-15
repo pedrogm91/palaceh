@@ -1,4 +1,4 @@
-<footer class="piecera">
+<footer class="piecera container well">
      <div class="row social">
      	<div class="col-xs-12">
             <div class="row">

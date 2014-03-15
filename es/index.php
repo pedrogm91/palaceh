@@ -31,10 +31,10 @@
            </section> <!-- asides -->
        </div> <!-- Content -->
     
-              <?php include "../-/components/php/footer.php" ?> <!-- Footer -->
+              
 
     </div> <!-- Container -->
-
+               <?php include "../-/components/php/footer.php" ?> <!-- Footer -->
     <script src="../-/js/myscripts.js"></script>
     <script src="../-/js/jquery.js"></script>
     <script src="../-/js/bootstrap.js"></script>
