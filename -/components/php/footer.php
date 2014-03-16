@@ -2,21 +2,21 @@
      <div class="row social">
      	<div class="col-xs-12">
             <div class="row">
-     		<div class="col-xs-4 text-center">
+     		<div class="col-sm-3 col-xs-3 col-md-2 col-lg-2 col-lg-offset-3 col-md-offset-4 col-sm-offset-2 col-xs-offset-2 text-center">
      			<img src="/images/facebook_alt.svg" class="img-responsive" alt="Facebook">
      		</div>
-     		<div class="col-xs-4 text-center">
+     		<div class="col-sm-3 col-xs-3 col-md-2 col-lg-2 text-center">
      			<img src="/images/twitter_alt.svg" class="img-responsive" alt="Twitter">
      		</div>
-     		<div class="col-xs-4 text-center">
+     		<div class="col-sm-3 col-xs-3 col-md-2 col-lg-2 text-center">
      			<img src="/images/foursquare.svg" class="img-responsive" alt="Foursquare">
      		</div>
      		</div>
 
      		<div class="row">
-     			<div class="col-xs-4 text-center"><p>Facebook</p></div>
-     			<div class="col-xs-4 text-center"><p>Twitter</p></div>
-     			<div class="col-xs-4 text-center"><p>Foursquare</p></div>
+     			<div class="col-sm-3 col-xs-3 col-md-2 col-lg-2 col-lg-offset-3 col-md-offset-4 col-sm-offset-2 col-xs-offset-2 text-center"><p>Facebook</p></div>
+     			<div class="col-sm-3 col-xs-3 col-md-2 col-lg-2 text-center"><p>  Twitter</p></div>
+     			<div class="col-sm-3 col-xs-3 col-md-2 col-lg-2 text-center"><p>Foursquare</p></div>
      		</div>
      	</div>
      </div> <!-- Social -->
