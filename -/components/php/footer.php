@@ -15,7 +15,7 @@
 
      		<div class="row">
      			<div class="col-sm-3 col-xs-3 col-md-2 col-lg-2 col-lg-offset-3 col-md-offset-4 col-sm-offset-2 col-xs-offset-2 text-center"><p>Facebook</p></div>
-     			<div class="col-sm-3 col-xs-3 col-md-2 col-lg-2 text-center"><p>  Twitter</p></div>
+     			<div class="col-sm-3 col-xs-3 col-md-2 col-lg-2 text-center"><p>Twitter</p></div>
      			<div class="col-sm-3 col-xs-3 col-md-2 col-lg-2 text-center"><p>Foursquare</p></div>
      		</div>
      	</div>
