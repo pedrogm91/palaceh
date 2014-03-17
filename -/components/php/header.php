@@ -30,8 +30,8 @@
 
 		<div class="collapse navbar-collapse" id="collapse">
 			<ul class="nav nav-pills nav-justified">
-				<li><a href="#">Inicio</a></li>
-				<li><a href="#">Servicios</a></li>
+				<li><a href="index.php">Inicio</a></li>
+				<li><a href="servicios.php">Servicios</a></li>
 				<li><a href="#">Habitaciones</a></li>
 				<li><a href="#">Tasca-Restaurant</a></li>
 				<li><a href="#">Reservas</a></li>

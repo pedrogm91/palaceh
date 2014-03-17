@@ -12,7 +12,7 @@
 @copyFontFamily:          Merriweather,Georgia, "Times New Roman", Times, serif;
 
 body {
-	
+
 }
 
 .form-horizontal .control-label {
@@ -70,25 +70,28 @@ img.pull-right {
 		margin-right:1%;
 		margin-top:10px;
 		margin-bottom:10px;
-	   	@media (max-width: 1199px) {
-			margin:0px;
-		}
-			@media (max-width: 991px) {
-			padding:5px;
-		    margin-left:0px;
-		    margin-right:0px;
-		    margin-top:10px;
-		    margin-bottom:10px;
-		}
-			@media (max-width: 768px) {
-			padding:5px;
-		    margin-left:0px;
-		    margin-right:0px;
-		    margin-top:10px;
-		    margin-bottom:10px;
-		}
+// Pantallas Grandes
+@media (max-width: 1199px) {
+	margin:0px;
+}
+//Medianas
+@media (max-width: 991px) {
+	padding:5px;
+	margin-left:0px;
+	margin-right:0px;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+//Pequenhas
+@media (max-width: 768px) {
+	padding:5px;
+	margin-left:0px;
+	margin-right:0px;
+	margin-top:10px;
+	margin-bottom:10px;
+}
 
-	}
+}
 
 
 }
@@ -96,8 +99,8 @@ img.pull-right {
 // Servicios
 .servicios {
 	ul{
-	  list-style: none;
-	  padding-left: 20px;
+		list-style: none;
+		padding-left: 20px;
 	}
 	li {
 		line-height: 2em;
@@ -121,19 +124,23 @@ img.pull-right {
 			}
 		}
 
-		 .col-sm-offset-2 {
-		 	@media (max-width: 410px){
-			margin-left:9%;
-		}
-		 @media (max-width: 1199px) and (min-width: 992px){
-			margin-left:25%;
-		}
-		@media (max-width: 767px) and (min-width: 411px){
-			margin-left:13%;
-		}
-		@media (max-width: 991px) and (min-width: 768px){
-			margin-left:12%;
-		}
+		.col-sm-offset-2 {
+			//XS
+			@media (max-width: 410px){
+				margin-left:9%;
+			}
+			//Grandes
+			@media (max-width: 1199px) and (min-width: 992px){
+				margin-left:25%;
+			}
+			//Pequ;as
+			@media (max-width: 767px) and (min-width: 411px){
+				margin-left:13%;
+			}
+			//Medianas
+			@media (max-width: 991px) and (min-width: 768px){
+				margin-left:12%;
+			}
 		}
 
 	}
@@ -152,4 +159,15 @@ article, aside {
 	p {
 		text-align: justify;
 	}
+}
+
+.Arservicios {
+
+	.col-sm-3 {
+		@media (max-width:410px) {
+			padding-left: 1%;
+			padding-right: 1%;
+		}
+	}
+
 }
