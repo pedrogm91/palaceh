@@ -8,7 +8,7 @@
 	</div> <!-- Row -->
 	<div class="row">
 		<section class="branding col-md-4">
-			<a href="index.php"><img class="img-responsive" src="/images/logopalace.svg" alt="Logo"></a>
+			<a href="index.php"><img class="img-responsive" src="/images/logopalace.jpg" alt="Logo"></a>
 		</section> <!-- branding -->
 		<div class="direccion col-md-4 col-md-offset-4">
 			<address>
