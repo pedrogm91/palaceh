@@ -1,0 +1,1 @@
+function equalHeight(t){tallest=0,t.each(function(){thisHeight=$(this).height(),thisHeight>tallest&&(tallest=thisHeight)}),t.each(function(){$(this).height(tallest)})}$(document).ready(function(){equalHeight($(".thumbnail"))});

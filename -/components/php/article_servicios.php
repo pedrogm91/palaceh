@@ -10,6 +10,7 @@
    	 <div class="col-sm-3 col-xs-6 text-center">
    	 	<div class="thumbnail">
    	 		<caption><strong>Agua Caliente</strong></caption>
+            <span id="sex"></span>
    	 		<img src="/images/servicios_holder.gif" alt="Servicios">
    	 	</div>
    	 </div>
