@@ -17,6 +17,7 @@
       <section class="col-lg-7">
         <?php include "../-/components/php/article_servicios.php" ?>
         <?php include "../-/components/php/article_coffee_shop.php" ?>
+        <?php include "../-/components/php/article_eventos_conferencias.php" ?>
       </section> <!-- Articles -->
 
       <section class="col-lg-5">
