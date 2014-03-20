@@ -22,7 +22,7 @@
 
       <section class="col-lg-5">
         <?php include "../-/components/php/snippet-formulario_reserva.php" ?>
-        <?php include "../-/components/php/aside_salon_conferencias.php" ?>
+        <?php include "../-/components/php/aside_tipo_habitacion.php" ?>
         <?php include "../-/components/php/aside_visitar_lapascua.php" ?>
         <?php include "../-/components/php/aside_servicios.php" ?>
       </section> <!-- Asides -->
