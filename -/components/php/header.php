@@ -32,7 +32,7 @@
 			<ul class="nav nav-pills nav-justified">
 				<li><a href="index.php">Inicio</a></li>
 				<li><a href="servicios.php">Servicios</a></li>
-				<li><a href="#">Habitaciones</a></li>
+				<li><a href="habitaciones.php">Habitaciones</a></li>
 				<li><a href="#">Tasca-Restaurant</a></li>
 				<li><a href="#">Reservas</a></li>
 				<li><a href="#">Preguntas</a></li>
