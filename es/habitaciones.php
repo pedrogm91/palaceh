@@ -14,18 +14,9 @@
     <div class="content row"> 
       <?php include "../-/components/php/header.php" ?> <!-- Header -->
 
-      <section class="col-lg-7">
-        <?php include "../-/components/php/article_servicios.php" ?>
-        <?php include "../-/components/php/article_coffee_shop.php" ?>
-        <?php include "../-/components/php/article_eventos_conferencias.php" ?>
+      <section class="col-md-12">
+        <?php include "../-/components/php/article_habitaciones.php" ?>
       </section> <!-- Articles -->
-
-      <section class="col-lg-5">
-        <?php include "../-/components/php/snippet-formulario_reserva.php" ?>
-        <?php include "../-/components/php/aside_tipo_habitacion.php" ?>
-        <?php include "../-/components/php/aside_visitar_lapascua.php" ?>
-        <?php include "../-/components/php/aside_servicios.php" ?>
-      </section> <!-- Asides -->
     </div> <!-- Content -->
   </div> <!-- Container -->
   <?php include "../-/components/php/footer.php" ?> <!-- Footer -->
