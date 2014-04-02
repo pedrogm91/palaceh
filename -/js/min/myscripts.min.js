@@ -1,0 +1,1 @@
+document.getElementById("matind2").addEventListener("click",function(){imgs=document.getElementsByTagName("img");for(var e=1,m=0;m<=imgs.length-1;m++)imgs[m].src="/images/habs/matind/matind_"+e+".gif"},"false");
