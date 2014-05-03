@@ -1,6 +1,6 @@
-<div class="tab-pane active" id="matrimonial">
+<div class="tab-pane" id="suitju">
 <legend>
-	<h2>Matrimonial</h2>
+	<h2>Suite Junior</h2>
 </legend>
 	<div class="row">
 		<div class="col-sm-6">

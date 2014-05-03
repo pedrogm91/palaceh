@@ -1,6 +1,6 @@
-<div class="tab-pane active" id="matrimonial">
+<div class="tab-pane" id="doblemat">
 <legend>
-	<h2>Matrimonial</h2>
+	<h2>Doble Matrimonial</h2>
 </legend>
 	<div class="row">
 		<div class="col-sm-6">

@@ -1,4 +1,4 @@
-<div class="tab-pane" id="matind">
+<div class="tab-pane" id="matindi">
  <legend>
  	   <h2>Matrimonial + Individual</h2>
  </legend>
@@ -20,4 +20,4 @@
 				</ul>
 			</div> <!-- Col -->
 		</div> <!-- Row -->
-</div> <!-- Matrimonial Tab pane -->
+</div> <!-- Matrimonial + indv Tab pane -->
