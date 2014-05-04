@@ -10,7 +10,7 @@
   <link href="../-/css/styles.css" rel="stylesheet">
 </head>
 <body id="habitaciones">
-  <div class="container">
+  <div class="container-fluid">
     <div class="content row"> 
       <?php include "../-/components/php/header.php" ?> <!-- Header -->
 

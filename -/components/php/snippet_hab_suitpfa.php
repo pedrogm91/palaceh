@@ -20,4 +20,4 @@
 				</ul>
 			</div> <!-- Col -->
 		</div> <!-- Row -->
-</div> <!-- Matrimonial Tab pane -->
+</div> <!-- Suite Palace Familiar Tab pane -->
