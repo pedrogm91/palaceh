@@ -1,6 +1,6 @@
 <article class="matrimonial">
 	<legend>
-		<h1>Tipos de Habitacion</h1>
+		<h1 id="tiposh">Tipos de Habitacion</h1>
 	</legend>
 	<div class="tabbable tabs">
 		<ul class="nav nav-tabs nav-justified">

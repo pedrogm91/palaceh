@@ -1,11 +1,5 @@
 <header class="clearfix">
-	<div class="row">
-		<div id="banderas" class="pull-right">
-			<a href="#"><img src="/images/flag_venezuela.png"></a>
-			<a href="#"><img src="/images/flag_us.png"></a>
-			<a href="#"><img src="/images/flag_portugal.gif"></a>
-		</div> <!-- Banderas -->
-	</div> <!-- Row -->
+
 	<div class="row">
 		<section class="branding col-md-4">
 			<a href="index.php"><img class="img-responsive" src="/images/logopalace.jpg" alt="Logo"></a>
