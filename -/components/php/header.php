@@ -27,8 +27,8 @@
 				<li><a href="index.php">Inicio</a></li>
 				<li><a href="servicios.php">Servicios</a></li>
 				<li><a href="habitaciones.php">Habitaciones</a></li>
-				<li><a href="#">Tasca-Restaurant</a></li>
-				<li><a href="#">Reservas</a></li>
+				<li><a href="tascarestaurant.php">Tasca-Restaurant</a></li>
+				<li><a href="reservas.php">Reservas</a></li>
 				<li><a href="#">Preguntas</a></li>
 				<li><a href="#">Contacto</a></li>
 			</ul> <!-- nav -->
