@@ -2,6 +2,28 @@
   <form class="form-horizontal" role="form">
     <fieldset>
       <legend><h2>Solicitud de Reserva</h2></legend>
+
+      <div class="form-group ocultoRes">
+        <label for="solicitante" class="col-xs-4 col-sm-4 control-label">Es usuario Registrado?</label>
+        <div class="col-xs-8 col-sm-8">
+          <input type="radio" class="" name="registrado" id="registrado" value="1">Si&nbsp
+          <input type="radio" checked class="" name="registrado" id="registrado" value="0">No&nbsp&nbsp
+        </div>
+      </div> <!-- Usuario Registrado -->
+      <div class="form-group ocultoRes">
+        <label for="identificacion" class="col-xs-4 col-sm-4 control-label">Identificacion</label>
+        <div class="col-xs-8 col-sm-8">
+          <input type="text" class="form-control" name="identificacion" id="identificacion" placeholder="Ej: J305241945">
+        </div>
+      </div> <!-- Identificacion -->
+
+      <div class="form-group">
+        <label for="clave" class="col-xs-4 col-sm-4 control-label">Clave</label>
+        <div class="col-xs-8 col-sm-8">
+          <input type="password" class="form-control" name="clave" id="clave">
+        </div>
+      </div> <!-- Clave -->
+
       <div class="form-group">
         <label for="solicitante" class="col-xs-4 col-sm-4 control-label">Solicitante</label>
         <div class="col-xs-8 col-sm-8">
