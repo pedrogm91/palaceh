@@ -43,3 +43,13 @@ var hash = window.location.hash;
     hash && $('ul.nav a[href="' + hash + '"]').tab('show');
 
 }); //JQuery is loaded
+ 
+var loginOculto = document.getElementById('ocultoRes');
+var siUserCheck = document.getElementById('siRegistrado');
+var noUserCheck = document.getElementById('noRegistrado');
+siUserCheck.addEventListener('change', function() {
+        loginOculto.className = "";
+}, 'false');
+noUserCheck.addEventListener('change', function() {
+        loginOculto.className = "ocultoRes";
+}, 'false');

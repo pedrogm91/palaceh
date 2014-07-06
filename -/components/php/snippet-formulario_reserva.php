@@ -3,26 +3,14 @@
     <fieldset>
       <legend><h2>Solicitud de Reserva</h2></legend>
 
-      <div class="form-group ocultoRes">
-        <label for="solicitante" class="col-xs-4 col-sm-4 control-label">Es usuario Registrado?</label>
-        <div class="col-xs-8 col-sm-8">
-          <input type="radio" class="" name="registrado" id="registrado" value="1">Si&nbsp
-          <input type="radio" checked class="" name="registrado" id="registrado" value="0">No&nbsp&nbsp
+      <div class="form-group">
+        <label for="solicitante" class="col-xs-4 control-label">Es usuario Registrado?</label>
+        <div class="form-inline col-xs-8">
+          <input type="radio" class="" name="registrado" id="siRegistrado" value="1">Si&nbsp
+          <input type="radio" checked class="" name="registrado" id="noRegistrado" value="0">No&nbsp&nbsp
+          <span id="ocultoRes" class="ocultoRes">Usuario:&nbsp<input type="text" name="identificacion" size="8" class="form-control">&nbspClave:&nbsp<input type="password" name="clave" size="8" class="form-control"></span>
         </div>
       </div> <!-- Usuario Registrado -->
-      <div class="form-group ocultoRes">
-        <label for="identificacion" class="col-xs-4 col-sm-4 control-label">Identificacion</label>
-        <div class="col-xs-8 col-sm-8">
-          <input type="text" class="form-control" name="identificacion" id="identificacion" placeholder="Ej: J305241945">
-        </div>
-      </div> <!-- Identificacion -->
-
-      <div class="form-group">
-        <label for="clave" class="col-xs-4 col-sm-4 control-label">Clave</label>
-        <div class="col-xs-8 col-sm-8">
-          <input type="password" class="form-control" name="clave" id="clave">
-        </div>
-      </div> <!-- Clave -->
 
       <div class="form-group">
         <label for="solicitante" class="col-xs-4 col-sm-4 control-label">Solicitante</label>
@@ -34,7 +22,7 @@
       <div class="form-group">
         <label for="email" class="col-xs-4 col-sm-4 control-label">E-mail</label>
         <div class="col-xs-8 col-sm-8">
-          <input type="text" class="form-control" name="email" id="email" placeholder="Email">
+          <input type="text" class="form-control" name="email" id="email" placeholder="Email">  
         </div>
       </div> <!-- Email -->
 
@@ -53,14 +41,40 @@
       </div> <!-- Indetificacion -->
 
       <div class="form-group">
-        <label for="checkin" class="col-xs-4 col-sm-4 control-label">Check IN</label>
-        <div class="col-xs-8 col-sm-8">
-          <input type="date" class="form-control" name="checkin" id="checkin" placeholder="Ej: 24/12/2013">
-        </div>
-      </div> <!-- Checkin -->
+       <span class="form-inline col-xs-4">
+        <label for="tipoHabitacion" class="control-label">Tipo de Habitacion</label>
+        <select name="tipohabitacion" id="tipohabitacion" style="" class="form-control">
+        <option value="Matrimonial">Matrimonial</option>
+        <option value="Matrimonial1">Matrimonial + Individual</option>
+        <option value="3ind">3 Camas Individuales</option>
+        <option value="dobmat">Doble Matrimonial</option>
+        <option value="4ind">Cuatro Camas Individuales</option>
+        <option value="suitej">Suite Junior</option>
+        <option value="suitep">Suite Palace</option>
+        <option value="suitepf">Suite Palace Familiar</option>
+        </select>
+        </span>
+        <span class="form-inline col-xs-8">
+          <label>Check-IN</label>&nbsp<input type="date" style="width:150px;" class="form-control" name="checkin">
+          <label>Check-OUT</label>&nbsp<input type="date" style="width:150px;" class="form-control" name="checkout">
+        </span>
+
+      </div> <!-- Tipohab  -->
+
+
+
+
+
+
+
+
+
+
+
+
 
       <div class="form-group">
-        <label for="checkout" class="col-xs-4 col-sm-4 control-label">Check OUT</label>
+        <label for="checkout" class=" col-xs-4 col-sm-4 control-label">Check OUT</label>
         <div class="col-xs-8 col-sm-8">
           <input type="date" class="form-control" name="checkout" id="checkout" placeholder="Ej: 25/12/2013">
         </div>
