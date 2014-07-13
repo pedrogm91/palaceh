@@ -42,7 +42,7 @@
 
       <div class="form-group">
        <span class="form-inline col-xs-4">
-        <select name="tipohabitacion" id="tipohabitacion" style="" class="form-control">
+        <select name="tipohabitacion" id="tipohabitacion" class="form-control listaha">
         <option value="0">Tipo de Habitacion</option>
         <option value="Matrimonial">Matrimonial</option>
         <option value="Matrimonial1">Matrimonial + Individual</option>
@@ -55,9 +55,9 @@
         </select>
         </span>
         <span class="form-inline col-xs-8 checkinout">
-          <span class="col-xs-4 asd"><label>Check-IN:</label>&nbsp&nbsp<input  class="chek" type="date" style="" class="form-control" name="checkin"></span>
-          <span class="col-xs-4 asde"><label>Check-OUT:</label>&nbsp&nbsp<input class="chek"  type="date" style="" class="form-control" name="checkout"></span>
-          <span class="col-xs-4 adf"></span>
+          <label for="checkin" class="col-sm-1 col-xs-12 control-label">Check-IN:</label><span class="col-sm-4 col-xs-12"><input type="date" style="" class="form-control" name="checkin"></span>
+          <label for="checkout" class="col-sm-1 asdf col-xs-12 control-label">Check-OUT:</label><span class="col-sm-4 col-xs-12 chek"><input type="date" style="" class="form-control" name="checkout"></span>
+          <span></span>
         </span> <!-- Checkin and Out -->
       </div> <!-- Tipohab  -->
 

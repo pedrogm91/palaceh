@@ -53,3 +53,19 @@ siUserCheck.addEventListener('change', function() {
 noUserCheck.addEventListener('change', function() {
         loginOculto.className = "ocultoRes";
 }, 'false');
+
+window.addEventListener('resize',function(){
+	var selectHab = document.getElementById('tipohabitacion');
+	if (window.innerWidth < 768){
+		selectHab.size = 6;
+	}
+	if (window.innerWidth > 768) {
+		selectHab.size = 1;
+	}
+},'false');
+window.addEventListener('load',function(){
+	var selectHab = document.getElementById('tipohabitacion');
+	if (window.innerWidth < 768){
+		selectHab.size= 6;
+	}
+},'fasle');

@@ -279,7 +279,7 @@ article, aside {
 }
 
 #tiposh, #tascares {
- margin-top: 0px;
+	margin-top: 0px;
 }
 
 .nav-res-target {
@@ -295,20 +295,107 @@ article, aside {
 .checkinout {
 	font-size: 12px;
 	font-weight:normal !important ;
-	.col-xs-4.asd {
-		width:35%;
-		padding-right: 5px;
+}
+@media  (max-width: 767px) {
+	.col-xs-12{
+		padding-left: 2px;
 	}
-	.col-xs-4.ase {
-		width:45%;
-		padding-right: 5px;
+	.col-sm-1 {
+		padding:2px;
 	}
-    .col-xs-4.adf{
-    	width:10%;
-    }
+	.form-horizontal .control-label{
+		padding-top:2px;
+	}
+	.listaha{
+		height: 50%;
+	}
+}
+	@media  (min-width: 768px) and (max-width:990px) {
+		.checkinout{
+		.control-label {
+			padding-left:2px;
+		}
+		.col-sm-1 {
+			width:14%;
+			padding-right: 1%;
+		}
+		.col-sm-1.asdf {
+			width:16%;
+		}
+		.chek {
+			width:35%;
 
+		}
+		.form-control{
+			width:90%;
+			padding-left:5%;
+		}
+		.col-sm-4 {
+			padding-right:1%;
+			padding-left:1%;
+		}
+	}
 }
 
+	@media  (min-width: 991px) and (max-width:1199px) {
+		.checkinout{
+		.control-label {
+			padding-left:2px;
+		}
+		.col-sm-1 {
+			width:10%;
+			padding-right: 1%;
+		}
+		.col-sm-1.asdf {
+			width:12%;
+		}
+		.chek {
+			width:35%;
+
+		}
+		.form-control{
+			width:90%;
+			padding-left:5%;
+		}
+		.col-sm-4 {
+			padding-right:1%;
+			padding-left:1%;
+		}
+	}
+}
+
+
+	@media (min-width:1200px) {
+		.checkinout{
+	    .control-label {
+			padding-left:2px;
+		}
+		.form-control{
+			width:100%;
+			padding-right:2px;
+		}
+		.col-sm-1 {
+			width:9%;
+			padding-right: 0.5%;
+		}
+		.col-sm-1.asdf {
+			width:10%;
+		}
+		.chek {
+			width:35%;
+
+		}
+
+		.col-sm-4 {
+			padding-right:1%;
+			padding-left:0.5%;
+			width:20%;
+		}
+	}
+}
+
+
+
 .chek{
-	width: 30%;
+	padding-left: 1%;
 }
