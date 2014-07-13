@@ -42,8 +42,8 @@
 
       <div class="form-group">
        <span class="form-inline col-xs-4">
-        <label for="tipoHabitacion" class="control-label">Tipo de Habitacion</label>
         <select name="tipohabitacion" id="tipohabitacion" style="" class="form-control">
+        <option value="0">Tipo de Habitacion</option>
         <option value="Matrimonial">Matrimonial</option>
         <option value="Matrimonial1">Matrimonial + Individual</option>
         <option value="3ind">3 Camas Individuales</option>
@@ -54,31 +54,13 @@
         <option value="suitepf">Suite Palace Familiar</option>
         </select>
         </span>
-        <span class="form-inline col-xs-8">
-          <label>Check-IN</label>&nbsp<input type="date" style="width:150px;" class="form-control" name="checkin">
-          <label>Check-OUT</label>&nbsp<input type="date" style="width:150px;" class="form-control" name="checkout">
-        </span>
-
+        <span class="form-inline col-xs-8 checkinout">
+          <span class="col-xs-4 asd"><label>Check-IN:</label>&nbsp&nbsp<input  class="chek" type="date" style="" class="form-control" name="checkin"></span>
+          <span class="col-xs-4 asde"><label>Check-OUT:</label>&nbsp&nbsp<input class="chek"  type="date" style="" class="form-control" name="checkout"></span>
+          <span class="col-xs-4 adf"></span>
+        </span> <!-- Checkin and Out -->
       </div> <!-- Tipohab  -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-      <div class="form-group">
-        <label for="checkout" class=" col-xs-4 col-sm-4 control-label">Check OUT</label>
-        <div class="col-xs-8 col-sm-8">
-          <input type="date" class="form-control" name="checkout" id="checkout" placeholder="Ej: 25/12/2013">
-        </div>
-      </div> <!-- Checkout -->
 
       <div class="form-group">
         <label for="pax" class="col-xs-4 col-sm-4 control-label">PAX</label>
