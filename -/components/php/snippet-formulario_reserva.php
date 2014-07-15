@@ -55,12 +55,32 @@
         </select>
         </span>
         <span class="form-inline col-xs-8 checkinout">
-          <label for="checkin" class="col-sm-1 col-xs-12 control-label">Check-IN:</label><span class="col-sm-4 col-xs-12"><input type="date" style="" class="form-control" name="checkin"></span>
-          <label for="checkout" class="col-sm-1 asdf col-xs-12 control-label">Check-OUT:</label><span class="col-sm-4 col-xs-12 chek"><input type="date" style="" class="form-control" name="checkout"></span>
+          <label for="checkin" class="col-sm-1 col-xs-12 control-label">Check-IN:</label><span class="col-sm-4 col-xs-12"><input placeholder="Ej: 01/01/2014" type="date" style="" class="form-control" name="checkin"></span>
+          <label for="checkout" class="col-sm-1 asdf col-xs-12 control-label">Check-OUT:</label><span class="col-sm-4 col-xs-12 chek"><input placeholder="Ej: 01/01/2014" type="date" style="" class="form-control" name="checkout"></span>
           <span></span>
         </span> <!-- Checkin and Out -->
       </div> <!-- Tipohab  -->
 
+      <div class="form-group">
+       <span class="form-inline col-xs-4">
+        <select name="tipohabitacion" id="tipohabitacion" class="form-control listaha">
+        <option value="0">Tipo de Habitacion</option>
+        <option value="Matrimonial">Matrimonial</option>
+        <option value="Matrimonial1">Matrimonial + Individual</option>
+        <option value="3ind">3 Camas Individuales</option>
+        <option value="dobmat">Doble Matrimonial</option>
+        <option value="4ind">Cuatro Camas Individuales</option>
+        <option value="suitej">Suite Junior</option>
+        <option value="suitep">Suite Palace</option>
+        <option value="suitepf">Suite Palace Familiar</option>
+        </select>
+        </span>
+        <span class="form-inline col-xs-8 checkinout">
+          <label for="checkin" class="col-sm-1 col-xs-12 control-label">Check-IN:</label><span class="col-sm-4 col-xs-12"><input placeholder="Ej: 01/01/2014" type="date" style="" class="form-control" name="checkin"></span>
+          <label for="checkout" class="col-sm-1 asdf col-xs-12 control-label">Check-OUT:</label><span class="col-sm-4 col-xs-12 chek"><input placeholder="Ej: 01/01/2014" type="date" style="" class="form-control" name="checkout"></span>
+          <span></span>
+        </span> <!-- Checkin and Out -->
+      </div> <!-- Tipohab  -->
 
       <div class="form-group">
         <label for="pax" class="col-xs-4 col-sm-4 control-label">PAX</label>

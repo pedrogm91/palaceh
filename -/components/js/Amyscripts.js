@@ -48,24 +48,35 @@ var loginOculto = document.getElementById('ocultoRes');
 var siUserCheck = document.getElementById('siRegistrado');
 var noUserCheck = document.getElementById('noRegistrado');
 siUserCheck.addEventListener('change', function() {
-        loginOculto.className = "";
+	loginOculto.className = "";
 }, 'false');
 noUserCheck.addEventListener('change', function() {
-        loginOculto.className = "ocultoRes";
+	loginOculto.className = "ocultoRes";
 }, 'false');
 
 window.addEventListener('resize',function(){
-	var selectHab = document.getElementById('tipohabitacion');
-	if (window.innerWidth < 768){
-		selectHab.size = 6;
-	}
-	if (window.innerWidth > 768) {
-		selectHab.size = 1;
+	var selectHab = document.getElementsByClassName('listaha');
+
+	for(i = 0; i <= selectHab.length-1; i++){
+		if (window.innerWidth < 768){
+			selectHab[i].size = 6;
+		}
+		if (window.innerWidth > 768) {
+			selectHab[i].size = 1;
+		}
 	}
 },'false');
+
+
+
+
 window.addEventListener('load',function(){
-	var selectHab = document.getElementById('tipohabitacion');
-	if (window.innerWidth < 768){
-		selectHab.size= 6;
+	var selectHab = document.getElementsByClassName('listaha');
+
+	for(i = 0; i <= selectHab.length-1; i++){
+		if (window.innerWidth < 768){
+			selectHab[i].size = 6;
+		}
 	}
-},'fasle');
+},'false');
+
