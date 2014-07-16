@@ -120,7 +120,4 @@ var botonMenos = document.getElementById('bMenos');
  	punteroRe = document.getElementById('habHolder');
  	divElim = punteroRe.previousSibling;
  	divElim.parentNode.removeChild(divElim);
-
-
-
  },'fasel');
