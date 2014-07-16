@@ -1,6 +1,5 @@
 <section class="formreserva">
-  <form class="form-horizontal" role="form">
-    <fieldset id="camposForm">
+  <form class="form-horizontal" role="form"><fieldset id="camposForm">
       <legend><h2>Solicitud de Reserva</h2></legend>
 
       <div class="form-group">
@@ -42,7 +41,7 @@
 
       <div class="form-group habitas">
        <span class="form-inline col-xs-4">
-        <select name="tipohabitacion" id="tipohabitacion" class="form-control listaha">
+        <select name="tipohabitacion1" id="tipohabitacion1" class="form-control listaha">
         <option value="0">Tipo de Habitacion</option>
         <option value="Matrimonial">Matrimonial</option>
         <option value="Matrimonial1">Matrimonial + Individual</option>
@@ -55,16 +54,11 @@
         </select>
         </span>
         <span class="form-inline col-xs-8 checkinout">
-          <label for="checkin" class="col-sm-1 col-xs-12 control-label">Check-IN:</label><span class="col-sm-4 col-xs-12"><input placeholder="Ej: 01/01/2014" type="date" style="" class="form-control" name="checkin"></span>
-          <label for="checkout" class="col-sm-1 asdf col-xs-12 control-label">Check-OUT:</label><span class="col-sm-4 col-xs-12 chek"><input placeholder="Ej: 01/01/2014" type="date" style="" class="form-control" name="checkout"></span>
+          <label for="checkin1" class="col-sm-1 col-xs-12 control-label">Check-IN:</label><span class="col-sm-4 col-xs-12"><input placeholder="Ej: 01/01/2014" type="date" style="" class="form-control" name="checkin1"></span>
+          <label for="checkout1" class="col-sm-1 asdf col-xs-12 control-label">Check-OUT:</label><span class="col-sm-4 col-xs-12 chek"><input placeholder="Ej: 01/01/2014" type="date" style="" class="form-control" name="checkout1"></span>
           <span></span>
         </span> <!-- Checkin and Out -->
-      </div> <!-- Tipohab  -->
-
-      <span id="habHolder">
-      </span>
-
-      <span id="punteroHabs"></span>
+      </div><div id="habHolder"></div><span id="punteroHabs"></span>
        <span><img id="bMas" src="/images/boton_mas.png"></span>
        <span><img id="bMenos" src="/images/boton_menos.png"></span>
 

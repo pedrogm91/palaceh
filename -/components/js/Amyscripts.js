@@ -78,42 +78,49 @@ window.addEventListener('load',function(){
 		}
 	}
 },'false');
- //Botones mas y menos del formulario
 
-var botonMas = document.getElementById('bMas');
-botonMas.addEventListener('click', function(){
-     var contarFormHab = document.getElementsByClassName("habitas");
-     if (contarFormHab.length > 2) {
-     
-     } else {
-     	var cantFormHab = contarFormHab.length;
-     	var campoHolder = document.getElementById('camposForm');
-     	var habHolder = document.getElementById('habHolder');
-     	var nuevoForm = document.createElement('div');
-     	campoHolder.insertBefore(nuevoForm,habHolder);
-     	nuevoForm.setAttribute('class','from-group habitas');
-     	nuevoForm.innerHTML = '<span class="form-inline col-xs-4">
-							        <select name="tipohabitacion" id="tipohabitacion" class="form-control listaha">
-							        <option value="0">Tipo de Habitacion</option>
-							        <option value="Matrimonial">Matrimonial</option>
-							        <option value="Matrimonial1">Matrimonial + Individual</option>
-							        <option value="3ind">3 Camas Individuales</option>
-							        <option value="dobmat">Doble Matrimonial</option>
-							        <option value="4ind">Cuatro Camas Individuales</option>
-							        <option value="suitej">Suite Junior</option>
-							        <option value="suitep">Suite Palace</option>
-							        <option value="suitepf">Suite Palace Familiar</option>
-							        </select>
-							        </span>
-							        <span class="form-inline col-xs-8 checkinout">
-							          <label for="checkin" class="col-sm-1 col-xs-12 control-label">Check-IN:</label><span class="col-sm-4 col-xs-12"><input placeholder="Ej: 01/01/2014" type="date" style="" class="form-control" name="checkin"></span>
-							          <label for="checkout" class="col-sm-1 asdf col-xs-12 control-label">Check-OUT:</label><span class="col-sm-4 col-xs-12 chek"><input placeholder="Ej: 01/01/2014" type="date" style="" class="form-control" name="checkout"></span>
-							          <span></span>
-							        </span> <!-- Checkin and Out -->
-							       ';
-        
-        
-        
+ //Boton Agregar Habitacion al Formulario
+ var botonMas = document.getElementById('bMas');
+ botonMas.addEventListener('click', function(){
+ 	var contarFormHab = document.getElementsByClassName("habitas");
+ 	var cantFormHab = contarFormHab.length+1;
+ 	contaH = cantFormHab.toString();
+ 	var campoHolder = document.getElementById('camposForm');
+ 	var spanHolder = document.getElementById('punteroHabs');
+ 	var habHolder = document.getElementById('habHolder');
+ 	habHolder.innerHTML = '    <div class="form-group habitas">
+ 	<span class="form-inline col-xs-4">
+ 	<select name="tipohabitacion'+contaH+'" id="tipohabitacion" class="form-control listaha">
+ 	<option value="0">Tipo de Habitacion</option>
+ 	<option value="Matrimonial">Matrimonial</option>
+ 	<option value="Matrimonial1">Matrimonial + Individual</option>
+ 	<option value="3ind">3 Camas Individuales</option>
+ 	<option value="dobmat">Doble Matrimonial</option>
+ 	<option value="4ind">Cuatro Camas Individuales</option>
+ 	<option value="suitej">Suite Junior</option>
+ 	<option value="suitep">Suite Palace</option>
+ 	<option value="suitepf">Suite Palace Familiar</option>
+ 	</select>
+ 	</span>
+ 	<span class="form-inline col-xs-8 checkinout">
+ 	<label for="checkin" class="col-sm-1 col-xs-12 control-label">Check-IN:</label><span class="col-sm-4 col-xs-12"><input placeholder="Ej: 01/01/2014" type="date" style="" class="form-control" name="checkin"></span>
+ 	<label for="checkout" class="col-sm-1 asdf col-xs-12 control-label">Check-OUT:</label><span class="col-sm-4 col-xs-12 chek"><input placeholder="Ej: 01/01/2014" type="date" style="" class="form-control" name="checkout"></span>
+ 	<span></span>
+ 	</span> <!-- Checkin and Out -->
+ 	</div>
+ 	';
+ 	habHolder.removeAttribute('id');
+ 	var nuevoHolder = document.createElement('div');
+ 	nuevoHolder.setAttribute('id','habHolder');
+ 	campoHolder.insertBefore(nuevoHolder,spanHolder);
+ },'false');
+//Boton Eliminar Habitacion del Formulario
+var botonMenos = document.getElementById('bMenos');
+ botonMenos.addEventListener('click', function(){
+ 	punteroRe = document.getElementById('habHolder');
+ 	divElim = punteroRe.previousSibling;
+ 	divElim.parentNode.removeChild(divElim);
 
-     }
-},'false');
+
+
+ },'fasel');
