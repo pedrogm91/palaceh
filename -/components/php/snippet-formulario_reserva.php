@@ -59,8 +59,8 @@
           <span></span>
         </span> <!-- Checkin and Out -->
       </div><div id="habHolder"></div><span id="punteroHabs"></span>
-       <span><img id="bMas" src="/images/boton_mas.png"></span>
-       <span><img id="bMenos" src="/images/boton_menos.png"></span>
+       <span><img id="bMas" style="width:30px; height:30px; cursor:pointer;" src="/images/boton_mas.png"></span>
+       <span><img id="bMenos" style="width:30px; height:30px; cursor:pointer;" src="/images/boton_menos.png"></span>
 
 
       <div class="form-group">
