@@ -1,5 +1,5 @@
 <section class="formreserva">
-  <form class="form-horizontal" role="form" action="reservar.php"><fieldset id="camposForm">
+  <form class="form-horizontal" method="post" role="form" action="../-/components/php/reservar.php"><fieldset id="camposForm">
       <legend><h2>Solicitud de Reserva</h2></legend>
 
       <div class="form-group">
@@ -33,9 +33,9 @@
       </div> <!-- Telefono -->
 
       <div class="form-group">
-        <label for="identificacion" class="col-xs-4 col-sm-4 control-label">Cedula / R.I.F.</label>
+        <label for="cedrif" class="col-xs-4 col-sm-4 control-label">Cedula / R.I.F.</label>
         <div class="col-xs-8 col-sm-8">
-          <input type="text" class="form-control" name="identificacion" id="identificacion" placeholder="ej: V-20.955.549">
+          <input type="text" class="form-control" name="cedrif" id="cedrif" placeholder="ej: V-20.955.549">
         </div>
       </div> <!-- Indetificacion -->
 
