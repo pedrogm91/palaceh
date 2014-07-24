@@ -41,7 +41,7 @@
 
       <div class="form-group habitas">
        <span class="form-inline col-xs-4">
-        <select name="tipohabitacion1" id="tipohabitacion1" class="form-control listaha">
+        <label for="tipohabitacion1">1)</label><select name="tipohabitacion1" id="tipohabitacion1" class="form-control listaha">
         <option value="0">Tipo de Habitacion</option>
         <option value="Matrimonial">Matrimonial</option>
         <option value="Matrimonial1">Matrimonial + Individual</option>
@@ -62,14 +62,14 @@
        <span><img id="bMas" style="width:30px; height:30px; cursor:pointer;" src="/images/boton_mas.png"></span>
        <span><img id="bMenos" style="width:30px; height:30px; cursor:pointer;" src="/images/boton_menos.png"></span>
 
-
       <div class="form-group">
-        <label for="pax" class="col-xs-4 col-sm-4 control-label">PAX</label>
+        <label for="huesped1" class="col-xs-4 col-sm-4 control-label">Huesped(es) Habitacion 1:</label>
         <div class="col-xs-8 col-sm-8">
-          <input type="text" class="form-control" name="pax" id="pax" placeholder="ej: 3">
+          <input type="text" class="form-control" name="huesped1" id="huesped1" placeholder="ej: Juan Alfonzo y Maria Arteaga">
         </div>
-      </div> <!-- PAX -->
-
+      </div> <!-- Huesped(es) -->
+     <div id="huesHolder"></div><span id="punteroHues"></span>
+      
       <div class="form-group">
         <label for="Comentarios" class="col-xs-4 col-sm-4 control-label">Comentarios</label>
         <div class="col-xs-8 col-sm-8">

@@ -88,9 +88,11 @@ window.addEventListener('load',function(){
  	var campoHolder = document.getElementById('camposForm');
  	var spanHolder = document.getElementById('punteroHabs');
  	var habHolder = document.getElementById('habHolder');
+ 	var huesHolder = document.getElementById('huesHolder');
+ 	var punteroHues = document.getElementById('punteroHues');
  	habHolder.innerHTML = '    <div class="form-group habitas">
  	<span class="form-inline col-xs-4">
- 	<select name="tipohabitacion'+contaH+'" id="tipohabitacion" class="form-control listaha">
+ 	<label for="tipohabitacion'+contaH+'">'+contaH+')</label><select name="tipohabitacion'+contaH+'" id="tipohabitacion" class="form-control listaha">
  	<option value="0">Tipo de Habitacion</option>
  	<option value="Matrimonial">Matrimonial</option>
  	<option value="Matrimonial1">Matrimonial + Individual</option>
@@ -109,6 +111,19 @@ window.addEventListener('load',function(){
  	</span> <!-- Checkin and Out -->
  	</div>
  	';
+     huesHolder.innerHTML = '
+          <div class="form-group">
+            <label for="huesped'+contaH+'" class="col-xs-4 col-sm-4 control-label">Huesped(es) Habitacion '+contaH+':</label>
+              <div class="col-xs-8 col-sm-8">
+               <input type="text" class="form-control" name="huesped'+contaH+'" id="huesped'+contaH+'" placeholder="ej: Juan Alfonzo y Maria Arteaga">
+              </div>
+            </div> <!-- Huesped(es) -->
+     ';
+   huesHolder.removeAttribute('id');
+   var nuevoHuesHolder = document.createElement('div');
+   nuevoHuesHolder.setAttribute('id','huesHolder');
+   campoHolder.insertBefore(nuevoHuesHolder,punteroHues);
+
  	habHolder.removeAttribute('id');
  	var nuevoHolder = document.createElement('div');
  	nuevoHolder.setAttribute('id','habHolder');
@@ -117,7 +132,17 @@ window.addEventListener('load',function(){
 //Boton Eliminar Habitacion del Formulario
 var botonMenos = document.getElementById('bMenos');
  botonMenos.addEventListener('click', function(){
+ 	var contarFormHab = document.getElementsByClassName("habitas");
+ 	if (contarFormHab.length <= 1){
+ 		return 0;
+ 	} else {
  	punteroRe = document.getElementById('habHolder');
  	divElim = punteroRe.previousSibling;
  	divElim.parentNode.removeChild(divElim);
+    punteroHuesRe = document.getElementById('huesHolder');
+    huesElim = punteroHuesRe.previousSibling;
+    punteroHuesRe.parentNode.removeChild(huesElim);
+ }
  },'fasel');
+
+ //
