@@ -25,5 +25,70 @@
   <script src="../-/js/jquery.js"></script>
   <script src="../-/js/myscripts.js"></script>
   <script src="../-/js/bootstrap.js"></script>
+  <script src="../-/js/bootstrapValidator.min.js"></script>
+  <script src="../-/js/es_CL.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function() {
+    $('#formReserva').bootstrapValidator({
+        message: 'This value is not valid',
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            solicitante: {
+                message: 'Campo no valido',
+                validators: {
+                    notEmpty: {
+                        message: 'Este campo es requerido y no puede estar vacio.'
+                    },
+                    stringLength: {
+                        min: 4,
+                        max: 20,
+                        message: 'Este campo debe tener minimo 4 caracteres y un maximo de 20'
+                    },
+                    regexp: {
+                        regexp: /^[a-zA-Z0-9_. ,]+$/,
+                        message: 'Este campo solo puede contener caracteres, numeros y puntos'
+                    }
+                }
+            },
+               email: {
+                validators: {
+                    notEmpty: {
+                        message: 'El correo es requerido y no puede ir vacio'
+                    },
+                    emailAddress: {
+                        message: 'El texto ingresado no es una direccion de correo electronico valida.'
+                    }
+                }
+            },
+            telefono: {
+                validators: {
+                    notEmpty: {
+                        message: 'El numero de telefono es requerido y no puede ir vacio.'
+                    },
+                    regexp: {
+                        regexp: /^[0-9]{11}$/,
+                        message: 'Por favor use el formato de 11 numeros Los guiones se agregan solos. Ej: 02353422440.'
+                    }
+                }
+            },
+            cedrif: {
+                validators: {
+                    notEmpty: {
+                        message: 'Este campo es requerido y no puede ir vacio.'
+                    },
+                    regexp: {
+                        regexp: /^[0-9]{6,9}$/,
+                        message: 'Este campo puede contener entre 6 y 9 digitos'
+                    }
+                }
+            }
+
+        }
+    });
+});</script>
 </body>
 </html>

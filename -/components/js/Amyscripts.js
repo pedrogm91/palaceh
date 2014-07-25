@@ -145,4 +145,44 @@ var botonMenos = document.getElementById('bMenos');
  }
  },'fasel');
 
- //
+ //Cambiar formato del telefono
+ $('#telefono').focusout(function(){
+ 	var probar = /^[0-9]{11}$/
+ 	if (probar.test($('#telefono').val())) {
+ 		var telefono = $('#telefono').val();
+ 		var nuevoTlf = new String();
+ 		var x = 0;
+        for (var i = 0; i <= telefono.length-1;i++){
+        	if (i == 3  || i == 6){
+        		nuevoTlf = nuevoTlf.concat(telefono[i]);
+        		nuevoTlf = nuevoTlf.concat('-');
+        		x++;
+        		x++;
+        	} else {
+        		nuevoTlf = nuevoTlf.concat(telefono[i]);
+        		x++;
+        	}
+        }
+ 		$('#telefono').val(nuevoTlf);
+ 	}
+ });
+
+ //Dropdown de cedula
+
+$('#Ven').click(function(){
+	$('#tipoCed').html('V <span class="caret"></span>');
+	$('#tipoCedu').val('V');
+});
+$('#Ex').click(function(){
+	$('#tipoCed').html('E <span class="caret"></span>');
+	$('#tipoCedu').val('E');
+});
+$('#Jud').click(function(){
+	$('#tipoCed').html('J <span class="caret"></span>');
+    $('#tipoCedu').val('J');
+});
+$('#Gob').click(function(){
+	$('#tipoCed').html('G <span class="caret"></span>');
+    $('#tipoCedu').val('G');
+});
+

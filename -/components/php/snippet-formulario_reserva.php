@@ -1,5 +1,5 @@
 <section class="formreserva">
-  <form class="form-horizontal" method="post" role="form" action="../-/components/php/reservar.php"><fieldset id="camposForm">
+  <form id="formReserva" class="form-horizontal" method="post" role="form" action="../-/components/php/reservar.php"><fieldset id="camposForm">
       <legend><h2>Solicitud de Reserva</h2></legend>
 
       <div class="form-group">
@@ -35,40 +35,60 @@
       <div class="form-group">
         <label for="cedrif" class="col-xs-4 col-sm-4 control-label">Cedula / R.I.F.</label>
         <div class="col-xs-8 col-sm-8">
-          <input type="text" class="form-control" name="cedrif" id="cedrif" placeholder="ej: V-20.955.549">
+           <div class="input-group">
+                <div class="input-group-btn">
+                  <button type="button" id="tipoCed" class="btn btn-default 
+                     dropdown-toggle" data-toggle="dropdown">V <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                     <li><a id="Ven">V</a></li>
+                     <li><a id="Ex">E</a></li>
+                     <li><a id="Jud">J</a></li>
+                     <li><a id="Gob">G</a></li>
+                  </ul>
+               </div><!-- /btn-group -->
+              <input type="hidden" value="V" id="tipoCedu" name="tipoCedu">
+              <input type="text" class="form-control" name="cedrif" id="cedrif" placeholder="ej: 305241945">
+           </div>
         </div>
       </div> <!-- Indetificacion -->
 
       <div class="form-group habitas">
-       <span class="form-inline col-xs-4">
-        <label for="tipohabitacion1">1)</label><select name="tipohabitacion1" id="tipohabitacion1" class="form-control listaha">
-        <option value="0">Tipo de Habitacion</option>
-        <option value="Matrimonial">Matrimonial</option>
-        <option value="Matrimonial1">Matrimonial + Individual</option>
-        <option value="3ind">3 Camas Individuales</option>
-        <option value="dobmat">Doble Matrimonial</option>
-        <option value="4ind">Cuatro Camas Individuales</option>
-        <option value="suitej">Suite Junior</option>
-        <option value="suitep">Suite Palace</option>
-        <option value="suitepf">Suite Palace Familiar</option>
+        <span class="form-inline col-xs-4">
+          <label for="tipohabitacion1">1)</label><select name="tipohabitacion1" id="tipohabitacion1" class="form-control listaha">
+          <option value="0">Tipo de Habitacion</option>
+          <option value="Matrimonial">Matrimonial</option>
+          <option value="Matrimonial1">Matrimonial + Individual</option>
+          <option value="3ind">3 Camas Individuales</option>
+          <option value="dobmat">Doble Matrimonial</option>
+          <option value="4ind">Cuatro Camas Individuales</option>
+          <option value="suitej">Suite Junior</option>
+          <option value="suitep">Suite Palace</option>
+          <option value="suitepf">Suite Palace Familiar</option>
         </select>
+      </span>
+      <span class="form-inline col-xs-8 checkinout">
+        <label for="checkin1" class="col-sm-1 col-xs-12 control-label">Check-IN:</label>
+        <span class="col-sm-4 col-xs-12">
+          <input placeholder="Ej: 01/01/2014" type="date" style="" class="form-control" name="checkin1">
         </span>
-        <span class="form-inline col-xs-8 checkinout">
-          <label for="checkin1" class="col-sm-1 col-xs-12 control-label">Check-IN:</label><span class="col-sm-4 col-xs-12"><input placeholder="Ej: 01/01/2014" type="date" style="" class="form-control" name="checkin1"></span>
-          <label for="checkout1" class="col-sm-1 asdf col-xs-12 control-label">Check-OUT:</label><span class="col-sm-4 col-xs-12 chek"><input placeholder="Ej: 01/01/2014" type="date" style="" class="form-control" name="checkout1"></span>
-          <span></span>
-        </span> <!-- Checkin and Out -->
-      </div><div id="habHolder"></div><span id="punteroHabs"></span>
-       <span><img id="bMas" style="width:30px; height:30px; cursor:pointer;" src="/images/boton_mas.png"></span>
-       <span><img id="bMenos" style="width:30px; height:30px; cursor:pointer;" src="/images/boton_menos.png"></span>
+          <label for="checkout1" class="col-sm-1 asdf col-xs-12 control-label">Check-OUT:</label>
+          <span class="col-sm-4 col-xs-12 chek">
+            <input placeholder="Ej: 01/01/2014" type="date" style="" class="form-control" name="checkout1">
+          </span>
+            <span></span>
+          </span> <!-- Checkin and Out -->
+        </div><div id="habHolder"></div><span id="punteroHabs"></span>
+        <span><img id="bMas" style="width:30px; height:30px; cursor:pointer;" src="/images/boton_mas.png"></span>
+        <span><img id="bMenos" style="width:30px; height:30px; cursor:pointer;" src="/images/boton_menos.png"></span>
 
-      <div class="form-group">
-        <label for="huesped1" class="col-xs-4 col-sm-4 control-label">Huesped(es) Habitacion 1:</label>
-        <div class="col-xs-8 col-sm-8">
-          <input type="text" class="form-control" name="huesped1" id="huesped1" placeholder="ej: Juan Alfonzo y Maria Arteaga">
-        </div>
-      </div> <!-- Huesped(es) -->
-     <div id="huesHolder"></div><span id="punteroHues"></span>
+        <div class="form-group">
+          <label for="huesped1" class="col-xs-4 col-sm-4 control-label">Huesped(es) Habitacion 1:</label>
+          <div class="col-xs-8 col-sm-8">
+            <input type="text" class="form-control" name="huesped1" id="huesped1" placeholder="ej: Juan Alfonzo y Maria Arteaga">
+          </div>
+        </div> <!-- Huesped(es) -->
+        <div id="huesHolder"></div><span id="punteroHues"></span>
       
       <div class="form-group">
         <label for="Comentarios" class="col-xs-4 col-sm-4 control-label">Comentarios</label>
