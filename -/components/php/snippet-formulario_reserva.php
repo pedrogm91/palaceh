@@ -9,23 +9,23 @@
             <h4 class="modal-title">Confirmacion de Reserva</h4>
           </div>
           <div class="modal-body">
-            <table border="1">
+            <table border="1" id="tablaConfRes">
               <tr><th colspan="7">Datos del Solicitante</th><tr>
               <tr>
                 <td>Solicitante</td>
-                <td colspan="6">Ramon Ledezma</td>
+                <td colspan="6" id="sol">Ramon Ledezma</td>
               </tr>
               <tr>
                 <td>E-Mail</td>
-                <td colspan="6">ramonlv93</td>
+                <td colspan="6" id="ema">ramonlv93</td>
               </tr>
               <tr>
                 <td>Telefono</td>
-                <td colspan="6">04160350957</td>
+                <td colspan="6" id="tel">04160350957</td>
               </tr>
               <tr>
                 <td> Cedula / RIF</td>
-                <td colspan="6">20955549</td>
+                <td colspan="6" id="cr">20955549</td>
               </tr>
               <tr><th colspan="7">Habitaciones</th><tr>
               <tr id="hab1">

@@ -167,7 +167,6 @@ var botonMenos = document.getElementById('bMenos');
  });
 
  //Dropdown de cedula
-
 $('#Ven').click(function(){
 	$('#tipoCed').html('V <span class="caret"></span>');
 	$('#tipoCedu').val('V');
@@ -185,3 +184,17 @@ $('#Gob').click(function(){
     $('#tipoCedu').val('G');
 });
 
+//Scripts del modal de reserva
+
+$('#submitModal').click(function(){
+var solicitante = $('#solicitante').val(), 
+    email = $('#email').val(),
+    telefono = $('#telefono').val(),
+    cedula = $('#cedrif').val(),
+    tipoCedu = $('#tipoCedu').val();
+
+    $('#sol').html(solicitante);
+    $('#ema').html(email);
+    $('#tel').html(telefono);
+    $('#cr').html(cedula);
+});
