@@ -92,8 +92,7 @@ window.addEventListener('load',function(){
  	var punteroHues = document.getElementById('punteroHues');
  	habHolder.innerHTML = '    <div class="form-group habitas">
  	<span class="form-inline col-xs-4">
- 	<label for="tipohabitacion'+contaH+'">'+contaH+')</label><select name="tipohabitacion'+contaH+'" id="tipohabitacion" class="form-control listaha">
- 	<option value="0">Tipo de Habitacion</option>
+	<label for="tipohabitacion[]">'+contaH+')</label><select name="tipohabitacion[]" id="tipohabitacion'+contaH+'" class="form-control listaha">
  	<option value="Matrimonial">Matrimonial</option>
  	<option value="Matrimonial1">Matrimonial + Individual</option>
  	<option value="3ind">3 Camas Individuales</option>
@@ -105,17 +104,17 @@ window.addEventListener('load',function(){
  	</select>
  	</span>
  	<span class="form-inline col-xs-8 checkinout">
- 	<label for="checkin" class="col-sm-1 col-xs-12 control-label">Check-IN:</label><span class="col-sm-4 col-xs-12"><input placeholder="Ej: 01/01/2014" type="date" style="" class="form-control" name="checkin"></span>
- 	<label for="checkout" class="col-sm-1 asdf col-xs-12 control-label">Check-OUT:</label><span class="col-sm-4 col-xs-12 chek"><input placeholder="Ej: 01/01/2014" type="date" style="" class="form-control" name="checkout"></span>
+ 	<label for="checkin[]" class="col-sm-1 col-xs-12 control-label">Check-IN:</label><span class="col-sm-4 col-xs-12"><input placeholder="Ej: 01/01/2014" type="date" style="" class="form-control" name="checkin[]"></span>
+ 	<label for="checkout[]" class="col-sm-1 asdf col-xs-12 control-label">Check-OUT:</label><span class="col-sm-4 col-xs-12 chek"><input placeholder="Ej: 01/01/2014" type="date" style="" class="form-control" name="checkout[]"></span>
  	<span></span>
  	</span> <!-- Checkin and Out -->
  	</div>
  	';
      huesHolder.innerHTML = '
           <div class="form-group">
-            <label for="huesped'+contaH+'" class="col-xs-4 col-sm-4 control-label">Huesped(es) Habitacion '+contaH+':</label>
+            <label for="huesped[]" class="col-xs-4 col-sm-4 control-label">Huesped(es) Habitacion '+contaH+':</label>
               <div class="col-xs-8 col-sm-8">
-               <input type="text" class="form-control" name="huesped'+contaH+'" id="huesped'+contaH+'" placeholder="ej: Juan Alfonzo y Maria Arteaga">
+               <input type="text" class="form-control" name="huesped[]" id="huesped'+contaH+'" placeholder="ej: Juan Alfonzo y Maria Arteaga">
               </div>
             </div> <!-- Huesped(es) -->
      ';

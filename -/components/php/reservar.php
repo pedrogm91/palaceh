@@ -1,4 +1,5 @@
 <?php
+/*
 function returnHabs(){
    
 $contHab = [];
@@ -11,10 +12,15 @@ do {
 } while (isset($_POST['tipohabitacion'.$strcont]));
 return $contHab;
 }
+*/
 
 $solicitante = $_POST['solicitante'];
 $email = $_POST['email'];
 $telefono = $_POST['telefono'];
 $cedrif = $_POST['cedrif'];
-$habs = returnHabs();
+//$habs = returnHabs();
+
+foreach ($_POST['checkin'] as $checkin) {
+  echo $checkin."<br>";
+}
 ?>

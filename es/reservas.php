@@ -27,6 +27,7 @@
   <script src="../-/js/bootstrap.js"></script>
   <script src="../-/js/bootstrapValidator.min.js"></script>
   <script src="../-/js/es_CL.js"></script>
+  <script src="../-/js/moment.min.js"></script>
   <script type="text/javascript">
   $(document).ready(function() {
     $('#formReserva').bootstrapValidator({
@@ -85,9 +86,8 @@
                         message: 'Este campo puede contener entre 6 y 9 digitos'
                     }
                 }
-            }
-
-        }
+            },
+      }
     });
 });</script>
 </body>
