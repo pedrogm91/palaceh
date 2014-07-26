@@ -5,12 +5,13 @@
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Volver</span></button>
             <h4 class="modal-title">Confirmacion de Reserva</h4>
           </div>
           <div class="modal-body">
-            <table border="1" id="tablaConfRes">
-              <tr><th colspan="7">Datos del Solicitante</th><tr>
+            <table class="table table-bordered">
+              <tbody id="tablaConfRes">
+              <tr><th colspan="7">Datos del Solicitante</th></tr>
               <tr>
                 <td>Solicitante</td>
                 <td colspan="6" id="sol">Ramon Ledezma</td>
@@ -27,22 +28,15 @@
                 <td> Cedula / RIF</td>
                 <td colspan="6" id="cr">20955549</td>
               </tr>
-              <tr><th colspan="7">Habitaciones</th><tr>
-              <tr id="hab1">
-                <td>1)Matrimonial</td>
-                <td>Check-IN</td>
-                <td>24/07/2014</td>
-                <td>Check-Out</td>
-                <td>25/07/2014</td>
-                <td>Huesped(es)</td><td>Ramon Ledezma y Daniela Baloa</td>
-              </tr>
-              <tr><th colspan="7">Huespedes</th><tr>
+              <tr id="lish"><th colspan="7">Habitaciones</th></tr>
+  
+              </tbody>
 
             </table>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-primary">Confirmar</button>
           </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
@@ -117,11 +111,11 @@
 <span class="form-inline col-xs-8 checkinout">
   <label for="checkin[]" class="col-sm-1 col-xs-12 control-label">Check-IN:</label>
   <span class="col-sm-4 col-xs-12">
-    <input placeholder="Ej: 01/01/2014" type="date" style="" class="form-control" name="checkin[]">
+    <input placeholder="Ej: 01/01/2014" type="date" style="" class="form-control" name="checkin[]" id="checkin1">
   </span>
   <label for="checkout[]" class="col-sm-1 asdf col-xs-12 control-label">Check-OUT:</label>
   <span class="col-sm-4 col-xs-12 chek">
-    <input placeholder="Ej: 01/01/2014" type="date" style="" class="form-control" name="checkout[]">
+    <input placeholder="Ej: 01/01/2014" type="date" style="" class="form-control" name="checkout[]" id="checkout1">
   </span>
   <span></span>
 </span> <!-- Checkin and Out -->

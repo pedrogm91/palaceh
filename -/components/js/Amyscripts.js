@@ -104,8 +104,8 @@ window.addEventListener('load',function(){
  	</select>
  	</span>
  	<span class="form-inline col-xs-8 checkinout">
- 	<label for="checkin[]" class="col-sm-1 col-xs-12 control-label">Check-IN:</label><span class="col-sm-4 col-xs-12"><input placeholder="Ej: 01/01/2014" type="date" style="" class="form-control" name="checkin[]"></span>
- 	<label for="checkout[]" class="col-sm-1 asdf col-xs-12 control-label">Check-OUT:</label><span class="col-sm-4 col-xs-12 chek"><input placeholder="Ej: 01/01/2014" type="date" style="" class="form-control" name="checkout[]"></span>
+ 	<label for="checkin[]" class="col-sm-1 col-xs-12 control-label">Check-IN:</label><span class="col-sm-4 col-xs-12"><input placeholder="Ej: 01/01/2014" type="date" style="" class="form-control" name="checkin[]" id="checkin'+contaH+'"></span>
+ 	<label for="checkout[]" class="col-sm-1 asdf col-xs-12 control-label">Check-OUT:</label><span class="col-sm-4 col-xs-12 chek"><input placeholder="Ej: 01/01/2014" type="date" style="" class="form-control" name="checkout[]" id="checkout'+contaH+'"></span>
  	<span></span>
  	</span> <!-- Checkin and Out -->
  	</div>
@@ -187,14 +187,67 @@ $('#Gob').click(function(){
 //Scripts del modal de reserva
 
 $('#submitModal').click(function(){
-var solicitante = $('#solicitante').val(), 
-    email = $('#email').val(),
-    telefono = $('#telefono').val(),
-    cedula = $('#cedrif').val(),
-    tipoCedu = $('#tipoCedu').val();
+	var solicitante = $('#solicitante').val(), 
+	email = $('#email').val(),
+	telefono = $('#telefono').val(),
+	cedula = $('#cedrif').val(),
+	tipoCedu = $('#tipoCedu').val(),
+	habs = document.getElementsByClassName('habitas'),
+	cant = habs.length;
+	cedula = tipoCedu.concat(cedula),
+	tabla = document.getElementById('tablaConfRes');
+    while (tabla.lastChild.id != 'lish') {
+    	tabla.removeChild(tabla.lastChild);
+    }
+	$('#sol').html(solicitante);
+	$('#ema').html(email);
+	$('#tel').html(telefono);
+	$('#cr').html(cedula);
+	for (var i = 0; i <= habs.length-1; i++){
+		var checkin = $('#checkin'+(i+1)).val(),
+		checkout = $('#checkout'+(i+1)).val(),
+		tipohabit = $('#tipohabitacion'+(i+1)).val(),
+		nomHuesped = $('#huesped'+(i+1)).val();
+		var nHabrows = document.createElement('tr'),
+		nHab = document.createElement('td'),
+		nIn = document.createElement('td'),
+		nOut = document.createElement('td'),
+		nHues = document.createElement('td'),
+		nHuesNom = document.createElement('td'),
+		nFecTr = document.createElement('tr'),
+		nFecIn = document.createElement('td'),
+		nFecOut = document.createElement('td');
 
-    $('#sol').html(solicitante);
-    $('#ema').html(email);
-    $('#tel').html(telefono);
-    $('#cr').html(cedula);
+		var nHabi = document.createTextNode(tipohabit),
+		textonIn = document.createTextNode('Check-IN'),
+		textonOut = document.createTextNode('Check-OUT'),
+		textonHues = document.createTextNode('Huesped(es)'),
+		textonHuesNom = document.createTextNode(nomHuesped),
+		nFecInVal = document.createTextNode(checkin),
+		nFecOutVal = document.createTextNode(checkout),
+		m = 2;
+		nHab.appendChild(nHabi);
+		nHuesNom.appendChild(textonHuesNom);
+		nHabrows.appendChild(nHab);
+		nIn.appendChild(textonIn);
+		nHabrows.appendChild(nIn);
+		nOut.appendChild(textonOut);
+		nHabrows.appendChild(nOut);
+		nHues.appendChild(textonHues);
+		nHabrows.appendChild(nHues);
+		nHabrows.appendChild(nHuesNom);
+
+		tabla.appendChild(nHabrows);
+		nFecIn.appendChild(nFecInVal);
+		nFecOut.appendChild(nFecOutVal);
+		nFecTr.appendChild(nFecIn);
+		nFecTr.appendChild(nFecOut);
+		tabla.appendChild(nFecTr);
+
+		nHabrows.setAttribute('id', 'hab'+(i+1));
+		nHab.setAttribute('rowspan', '2');
+		nHues.setAttribute('rowspan', '2');
+		nHuesNom.setAttribute('rowspan', '2');
+
+	}
 });
