@@ -26,6 +26,8 @@
   <script src="../-/js/myscripts.js"></script>
   <script src="../-/js/bootstrap.js"></script>
   <script src="../-/js/bootstrapValidator.min.js"></script>
+  <script src="../-/js/moment.min.js"></script>
+  <script src="../-/js/accounting.min.js"></script>
   <script type="text/javascript">
   $(document).ready(function() {
     $('#formReserva').bootstrapValidator({

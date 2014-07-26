@@ -28,7 +28,15 @@
                 <td> Cedula / RIF</td>
                 <td colspan="6" id="cr">20955549</td>
               </tr>
-              <tr id="lish"><th colspan="7">Habitaciones</th></tr>
+              <tr><th colspan="7">Habitaciones</th></tr>
+              <tr id="lish">
+                <td>Tipo de habitacion</td>
+                <td>Huesped(es)</td>
+                <td>Check-In</td>
+                <td>Check-Out</td>
+                <td>Noches</td>
+                <td>Subtotal</td>
+              </tr>
   
               </tbody>
 

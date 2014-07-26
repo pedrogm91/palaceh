@@ -14,6 +14,9 @@ group.each(function() { $(this).height(tallest); });
 window.addEventListener('resize', function() {
 setTimeout(function() {equalHeight($(".thumbnail"));}, 2000); }, 'false');
 */
+function roundToTwo(num) {    
+    return +(Math.round(num + "e+2")  + "e-2");
+}
 
 var navItems= document.getElementsByClassName('nav-hab-item');
 
@@ -186,7 +189,18 @@ $('#Gob').click(function(){
 
 //Scripts del modal de reserva
 
+//Tarifas de habitacion
+ var   costoMat = 580.36,
+       costoMat1 = 625.00,
+       costo3Ind = 758.93,
+       costoDobMat = 803.57,
+       costo4Ind = 803.57,
+       costoSuiteJ = 892.86,
+       costoSuiteP = 982.14,
+       costoSuitePF = 1071.43;
+
 $('#submitModal').click(function(){
+	//Recuperar datos del formulario
 	var solicitante = $('#solicitante').val(), 
 	email = $('#email').val(),
 	telefono = $('#telefono').val(),
@@ -195,59 +209,105 @@ $('#submitModal').click(function(){
 	habs = document.getElementsByClassName('habitas'),
 	cant = habs.length;
 	cedula = tipoCedu.concat(cedula),
+	//Referencia de la tabla para insercion
 	tabla = document.getElementById('tablaConfRes');
+	//Limpiar tabla antes de cargarla
     while (tabla.lastChild.id != 'lish') {
     	tabla.removeChild(tabla.lastChild);
     }
+    //Insertar en tabla datos del solicitante
 	$('#sol').html(solicitante);
 	$('#ema').html(email);
 	$('#tel').html(telefono);
 	$('#cr').html(cedula);
+	//Contar Habitaciones
 	for (var i = 0; i <= habs.length-1; i++){
-		var checkin = $('#checkin'+(i+1)).val(),
-		checkout = $('#checkout'+(i+1)).val(),
+		//Obtener informacion de las habitaciones solicitadas
+		var checkin1 = $('#checkin'+(i+1)).val(),
+		checkout1 = $('#checkout'+(i+1)).val(),
 		tipohabit = $('#tipohabitacion'+(i+1)).val(),
 		nomHuesped = $('#huesped'+(i+1)).val();
+		checkout1 = moment(checkout1);
+		checkin1 = moment(checkin1);
+        //Dar formato a la fecha que ira en la tabla
+		var checkout = checkout1.format('DD/MM/YYYY');
+		var checkin = checkin1.format('DD/MM/YYYY');
+		//Determinar numero de noches entre las dos fechas
+		var noches = checkout1.diff(checkin1,'Days');
+        var subtotal  = 0.00;
+        var costohab;
+        switch(tipohabit){
+        	case 'Matrimonial':
+              costohab = costoMat;
+              tipohabit = 'Matrimonial'
+              break;
+            case 'Matrimonial1':
+              costohab = costoMat1;
+              tipohabit = 'Matrimonial con Individual'
+              break;
+              case '3ind':
+              costohab = costo3Ind;
+              tipohabit = '3 Camas Matrimoniales'
+              break;
+              case 'dobmat':
+              costohab = costoDobMat;
+              tipohabit = 'Doble Matrimonial'
+              break;
+              case '4ind':
+              costohab = costo4Ind;
+              tipohabit = 'Cuatro Camas Individuales'
+              break;
+              case 'suitej':
+              costohab = costoSuiteJ;
+              tipohabit = 'Suite Junior'
+              break;
+              case 'suitep':
+              costohab = costoSuiteP;
+              tipohabit = 'Suite Palace'
+              break;
+              case 'suitepf':
+              costohab = costoSuitePF;
+              tipohabit = 'Suite Palace Familiar'
+              break;
+
+
+        }
+       subtotal = accounting.formatMoney(roundToTwo(costohab*noches), [symbol = "Bs     "], [precision = 2], [thousand = "."], [decimal = ","], [format = "%s%v"]);
+
+
+		//Crear Elementos vacios
 		var nHabrows = document.createElement('tr'),
 		nHab = document.createElement('td'),
 		nIn = document.createElement('td'),
 		nOut = document.createElement('td'),
-		nHues = document.createElement('td'),
+		nNoches = document.createElement('td'),
 		nHuesNom = document.createElement('td'),
-		nFecTr = document.createElement('tr'),
-		nFecIn = document.createElement('td'),
-		nFecOut = document.createElement('td');
-
+		nSubtotal = document.createElement('td');
+	    //Crear nodos de texto
 		var nHabi = document.createTextNode(tipohabit),
-		textonIn = document.createTextNode('Check-IN'),
-		textonOut = document.createTextNode('Check-OUT'),
-		textonHues = document.createTextNode('Huesped(es)'),
 		textonHuesNom = document.createTextNode(nomHuesped),
 		nFecInVal = document.createTextNode(checkin),
 		nFecOutVal = document.createTextNode(checkout),
-		m = 2;
-		nHab.appendChild(nHabi);
-		nHuesNom.appendChild(textonHuesNom);
-		nHabrows.appendChild(nHab);
-		nIn.appendChild(textonIn);
-		nHabrows.appendChild(nIn);
-		nOut.appendChild(textonOut);
-		nHabrows.appendChild(nOut);
-		nHues.appendChild(textonHues);
-		nHabrows.appendChild(nHues);
-		nHabrows.appendChild(nHuesNom);
-
-		tabla.appendChild(nHabrows);
-		nFecIn.appendChild(nFecInVal);
-		nFecOut.appendChild(nFecOutVal);
-		nFecTr.appendChild(nFecIn);
-		nFecTr.appendChild(nFecOut);
-		tabla.appendChild(nFecTr);
-
+		noches = document.createTextNode(noches),
+		subtotalText = document.createTextNode(subtotal);
+        //Unir nodos de texto a Elementos vacios
+        nHab.appendChild(nHabi);
+        nHuesNom.appendChild(textonHuesNom);
+        nIn.appendChild(nFecInVal);
+        nOut.appendChild(nFecOutVal);
+        nNoches.appendChild(noches);
+        nSubtotal.appendChild(subtotalText);
+        //Unir Elementos en la fila de la habitacion
+        nHabrows.appendChild(nHab);
+        nHabrows.appendChild(nHuesNom);
+        nHabrows.appendChild(nIn);
+        nHabrows.appendChild(nOut);
+        nHabrows.appendChild(nNoches);
+        nHabrows.appendChild(nSubtotal);
+        //Unir la fila a la tabla    
+        tabla.appendChild(nHabrows);
+        //Crear un id a cada habitacion
 		nHabrows.setAttribute('id', 'hab'+(i+1));
-		nHab.setAttribute('rowspan', '2');
-		nHues.setAttribute('rowspan', '2');
-		nHuesNom.setAttribute('rowspan', '2');
 
 	}
 });
