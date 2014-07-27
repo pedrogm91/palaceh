@@ -10,40 +10,65 @@
           </div>
           <div class="modal-body">
             <table class="table table-bordered">
+              <colgroup>
+              <col span="1" style="width: 23%;">
+              <col span="1" style="width: 25%;">
+              <col span="1" style="width: 12%;">
+              <col span="1" style="width: 12%;">
+              <col span="1" style="width: 5%;">
+              <col span="1" style="width: 23%;">
+            </colgroup>
               <tbody id="tablaConfRes">
-              <tr><th colspan="7">Datos del Solicitante</th></tr>
+              <tr><th colspan="7" class="well">Datos del Solicitante</th></tr>
               <tr>
-                <td>Solicitante</td>
+                <td><strong>Solicitante</strong></td>
                 <td colspan="6" id="sol">Ramon Ledezma</td>
               </tr>
               <tr>
-                <td>E-Mail</td>
+                <td><strong>E-Mail</strong></td>
                 <td colspan="6" id="ema">ramonlv93</td>
               </tr>
               <tr>
-                <td>Telefono</td>
+                <td><strong>Telefono</strong></td>
                 <td colspan="6" id="tel">04160350957</td>
               </tr>
               <tr>
-                <td> Cedula / RIF</td>
+                <td> <strong>Cedula / RIF</strong></td>
                 <td colspan="6" id="cr">20955549</td>
               </tr>
-              <tr><th colspan="7">Habitaciones</th></tr>
+              <tr><th colspan="7" class="well">Habitaciones</th></tr>
               <tr id="lish">
-                <td>Tipo de habitacion</td>
-                <td>Huesped(es)</td>
-                <td>Check-In</td>
-                <td>Check-Out</td>
-                <td>Noches</td>
-                <td>Subtotal</td>
+                <td><strong>Tipo de habitacion</strong></td>
+                <td><strong>Huesped(es)</strong></td>
+                <td><strong>Check-In</strong></td>
+                <td><strong>Check-Out</strong></td>
+                <td><strong>Noches</strong></td>
+                <td><strong>Subtotal</strong></td>
               </tr>
-  
               </tbody>
-
             </table>
+            <table class="table table-bordered" style="width:54%; position:relative; left:46.3%;">
+            <col span="1" style="width: 58.5%;">
+              <col span="1" style="width: 41.5%;">
+                <tbody>
+                  <tr>
+                    <td>Base Imponible(G)</td>
+                    <td>45923.32</td>
+                  </tr>
+                  <tr>
+                   <td>I.V.A.(12%)</td>
+                   <td>1234.34</td>
+                  </tr>
+                  <tr>
+                    <td>Total a Pagar</td>
+                    <td>50234.23</td>
+                  </tr>
+                </tbody>
+              </table>
+
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Volver</button>
             <button type="button" class="btn btn-primary">Confirmar</button>
           </div>
         </div><!-- /.modal-content -->
@@ -148,7 +173,7 @@
 
 <div class="form-group">
   <div class="col-sm-offset-4">
-    <button type="button" id="submitModal" class="btn btn-default" data-toggle="modal" data-target="#myModal">Reservar</button>
+    <button type="button" id="submitModal" class="btn btn-default"  data-target="#myModal">Reservar</button>
   </div>
 </div> <!-- Boton -->
 

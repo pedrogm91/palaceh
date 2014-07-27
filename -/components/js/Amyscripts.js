@@ -200,6 +200,10 @@ $('#Gob').click(function(){
        costoSuitePF = 1071.43;
 
 $('#submitModal').click(function(){
+	//Validar antes de mostrar el modal
+    $('#formReserva').data('bootstrapValidator').validate();
+    if (!$('#formReserva').data('bootstrapValidator').isValid()){
+    } else {
 	//Recuperar datos del formulario
 	var solicitante = $('#solicitante').val(), 
 	email = $('#email').val(),
@@ -269,12 +273,8 @@ $('#submitModal').click(function(){
               costohab = costoSuitePF;
               tipohabit = 'Suite Palace Familiar'
               break;
-
-
         }
        subtotal = accounting.formatMoney(roundToTwo(costohab*noches), [symbol = "Bs     "], [precision = 2], [thousand = "."], [decimal = ","], [format = "%s%v"]);
-
-
 		//Crear Elementos vacios
 		var nHabrows = document.createElement('tr'),
 		nHab = document.createElement('td'),
@@ -308,6 +308,9 @@ $('#submitModal').click(function(){
         tabla.appendChild(nHabrows);
         //Crear un id a cada habitacion
 		nHabrows.setAttribute('id', 'hab'+(i+1));
-
 	}
+	$('#myModal').modal(); 
+	$('#myModal').show;
+  }
 });
+
