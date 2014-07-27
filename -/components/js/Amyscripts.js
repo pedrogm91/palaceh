@@ -107,8 +107,8 @@ window.addEventListener('load',function(){
  	</select>
  	</span>
  	<span class="form-inline col-xs-8 checkinout">
- 	<label for="checkin[]" class="col-sm-1 col-xs-12 control-label">Check-IN:</label><span class="col-sm-4 col-xs-12"><input placeholder="Ej: 01/01/2014" type="date" style="" class="form-control" name="checkin[]" id="checkin'+contaH+'"></span>
- 	<label for="checkout[]" class="col-sm-1 asdf col-xs-12 control-label">Check-OUT:</label><span class="col-sm-4 col-xs-12 chek"><input placeholder="Ej: 01/01/2014" type="date" style="" class="form-control" name="checkout[]" id="checkout'+contaH+'"></span>
+ 	<label for="checkin[]" class="col-sm-1 col-xs-12 control-label">Check-IN:</label><span class="col-sm-4 col-xs-12"><input placeholder="Ej: 01/01/2014" type="date" style="" class="form-control calNoStyle" name="checkin[]" id="checkin'+contaH+'"></span>
+ 	<label for="checkout[]" class="col-sm-1 asdf col-xs-12 control-label">Check-OUT:</label><span class="col-sm-4 col-xs-12 chek"><input placeholder="Ej: 01/01/2014" type="date" style="" class="form-control calNoStyle" name="checkout[]" id="checkout'+contaH+'"></span>
  	<span></span>
  	</span> <!-- Checkin and Out -->
  	</div>
@@ -205,20 +205,34 @@ $('#submitModal').click(function(){
     if (!$('#formReserva').data('bootstrapValidator').isValid()){
     } else {
 	//Recuperar datos del formulario
-	var solicitante = $('#solicitante').val(), 
-	email = $('#email').val(),
-	telefono = $('#telefono').val(),
-	cedula = $('#cedrif').val(),
-	tipoCedu = $('#tipoCedu').val(),
-	habs = document.getElementsByClassName('habitas'),
-	cant = habs.length;
-	cedula = tipoCedu.concat(cedula),
-	//Referencia de la tabla para insercion
-	tabla = document.getElementById('tablaConfRes');
+	var tdBase = document.getElementById('baseI'),
+	    tdiva = document.getElementById('iva'),
+	    tdtotalP = document.getElementById('totalPagar'),
+		solicitante = $('#solicitante').val(), 
+		email = $('#email').val(),
+		telefono = $('#telefono').val(),
+		cedula = $('#cedrif').val(),
+		tipoCedu = $('#tipoCedu').val(),
+		habs = document.getElementsByClassName('habitas'),
+		cant = habs.length;
+		cedula = tipoCedu.concat(cedula),
+		total = 0,
+		//Referencia de la tabla para insercion
+		tabla = document.getElementById('tablaConfRes');
 	//Limpiar tabla antes de cargarla
     while (tabla.lastChild.id != 'lish') {
     	tabla.removeChild(tabla.lastChild);
     }
+    while (tdBase.lastChild.className != 'noElim') {
+    	tdBase.removeChild(tdBase.lastChild);
+    }
+    while (tdiva.lastChild.className != 'noElim') {
+    	tdiva.removeChild(tdiva.lastChild);
+    }
+    while (tdtotalP.lastChild.className != 'noElim') {
+    	tdtotalP.removeChild(tdtotalP.lastChild);
+    }
+
     //Insertar en tabla datos del solicitante
 	$('#sol').html(solicitante);
 	$('#ema').html(email);
@@ -238,8 +252,8 @@ $('#submitModal').click(function(){
 		var checkin = checkin1.format('DD/MM/YYYY');
 		//Determinar numero de noches entre las dos fechas
 		var noches = checkout1.diff(checkin1,'Days');
-        var subtotal  = 0.00;
-        var costohab;
+        var subtotal  = 0.00,
+            costohab;
         switch(tipohabit){
         	case 'Matrimonial':
               costohab = costoMat;
@@ -274,7 +288,9 @@ $('#submitModal').click(function(){
               tipohabit = 'Suite Palace Familiar'
               break;
         }
-       subtotal = accounting.formatMoney(roundToTwo(costohab*noches), [symbol = "Bs     "], [precision = 2], [thousand = "."], [decimal = ","], [format = "%s%v"]);
+       subtotal = roundToTwo(costohab*noches);
+       total = roundToTwo(total+subtotal);
+       subtotal = accounting.formatMoney(subtotal, [symbol = ""], [precision = 2], [thousand = "."], [decimal = ","], [format = "%s%v"]);
 		//Crear Elementos vacios
 		var nHabrows = document.createElement('tr'),
 		nHab = document.createElement('td'),
@@ -291,6 +307,7 @@ $('#submitModal').click(function(){
 		noches = document.createTextNode(noches),
 		subtotalText = document.createTextNode(subtotal);
         //Unir nodos de texto a Elementos vacios
+        nSubtotal.setAttribute('class','montos');
         nHab.appendChild(nHabi);
         nHuesNom.appendChild(textonHuesNom);
         nIn.appendChild(nFecInVal);
@@ -309,6 +326,29 @@ $('#submitModal').click(function(){
         //Crear un id a cada habitacion
 		nHabrows.setAttribute('id', 'hab'+(i+1));
 	}
+	var iva = roundToTwo(total*12/100),
+	    totalF = total+iva,
+	    nuevoBi = document.createElement('td'),
+	    nuevoIva = document.createElement('td'),
+	    nuevoTotal = document.createElement('td'),
+	    arrayTot = [total,iva,totalF],
+	    arrayTot = accounting.formatColumn(arrayTot, [symbol = "Bs     "], [precision = 2], [thousand = "."], [decimal = ","], [format = "%s%v"]);
+ 
+	var textoBi = document.createTextNode(arrayTot[0]),
+	    textoIva = document.createTextNode(arrayTot[1]),
+	    textoTotal = document.createTextNode(arrayTot[2]);
+	nuevoBi.setAttribute('class','montos');
+	nuevoIva.setAttribute('class','montos');
+	nuevoTotal.setAttribute('class','montos');
+
+	nuevoBi.appendChild(textoBi);
+	nuevoIva.appendChild(textoIva);
+	nuevoTotal.appendChild(textoTotal);
+    tdBase.appendChild(nuevoBi);
+    tdiva.appendChild(nuevoIva);
+    tdtotalP.appendChild(nuevoTotal);
+
+
 	$('#myModal').modal(); 
 	$('#myModal').show;
   }

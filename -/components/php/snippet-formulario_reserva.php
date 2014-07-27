@@ -11,12 +11,12 @@
           <div class="modal-body">
             <table class="table table-bordered">
               <colgroup>
-              <col span="1" style="width: 23%;">
               <col span="1" style="width: 25%;">
+              <col span="1" style="width: 29%;">
               <col span="1" style="width: 12%;">
               <col span="1" style="width: 12%;">
               <col span="1" style="width: 5%;">
-              <col span="1" style="width: 23%;">
+              <col span="1" style="width: 17%;">
             </colgroup>
               <tbody id="tablaConfRes">
               <tr><th colspan="7" class="well">Datos del Solicitante</th></tr>
@@ -47,21 +47,18 @@
               </tr>
               </tbody>
             </table>
-            <table class="table table-bordered" style="width:54%; position:relative; left:46.3%;">
-            <col span="1" style="width: 58.5%;">
-              <col span="1" style="width: 41.5%;">
+            <table class="table table-bordered" style="width:36.5%; position:relative; left:63.5%;">
+            <col span="1" style="width: 54%;"></col>
+              <col span="1" style="width: 46%; font-family:consolas;"></col>
                 <tbody>
-                  <tr>
-                    <td>Base Imponible(G)</td>
-                    <td>45923.32</td>
+                  <tr id="baseI">
+                    <td class="noElim">Base Imponible(G)</td>             
                   </tr>
-                  <tr>
-                   <td>I.V.A.(12%)</td>
-                   <td>1234.34</td>
+                  <tr id="iva">
+                   <td class="noElim">I.V.A.(12%)</td>      
                   </tr>
-                  <tr>
-                    <td>Total a Pagar</td>
-                    <td>50234.23</td>
+                  <tr id="totalPagar">
+                    <td class="noElim">Total a Pagar</td>      
                   </tr>
                 </tbody>
               </table>
@@ -144,11 +141,11 @@
 <span class="form-inline col-xs-8 checkinout">
   <label for="checkin[]" class="col-sm-1 col-xs-12 control-label">Check-IN:</label>
   <span class="col-sm-4 col-xs-12">
-    <input placeholder="Ej: 01/01/2014" type="date" style="" class="form-control" name="checkin[]" id="checkin1">
+    <input placeholder="Ej: 01/01/2014" type="date" style="" class="form-control calNoStyle" name="checkin[]" id="checkin1">
   </span>
   <label for="checkout[]" class="col-sm-1 asdf col-xs-12 control-label">Check-OUT:</label>
   <span class="col-sm-4 col-xs-12 chek">
-    <input placeholder="Ej: 01/01/2014" type="date" style="" class="form-control" name="checkout[]" id="checkout1">
+    <input placeholder="Ej: 01/01/2014" type="date" style="" class="form-control calNoStyle" name="checkout[]" id="checkout1">
   </span>
   <span></span>
 </span> <!-- Checkin and Out -->
